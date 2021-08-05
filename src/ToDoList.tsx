@@ -67,7 +67,7 @@ const TodoList = () => {
         <div className="flex flex-col-reverse">
           {tasks.map(x => <Task id={x.id} name={x.name} doneFn={doneTask} deleteFn={deleteTask} />)}
         </div>
-        <div className="flex flex-col-reverse bg-green-300">
+        <div className="flex flex-col-reverse">
           {doneTasks.map(x => <DoneTask id={x.id} name={x.name} />)}
         </div>
 
