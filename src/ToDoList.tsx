@@ -28,7 +28,7 @@ const TodoList = () => {
     const input = document.querySelector('input')
 
     if(input != null){
-      if(input.value == ''){
+      if(input.value.replaceAll(' ','') == ''){
         alert('Task cannot be empty.')
       }
       else{
@@ -59,7 +59,7 @@ const TodoList = () => {
     <div className='mx-auto max-w-4xl'>
       <div>
         <div className='flex'>
-          <input className='border border-gray-400 w-full text-2xl'
+          <input type="text" maxLength={40} className='border border-gray-400 w-full text-2xl'
             onKeyDown={onKeyDownCallback} onChange={onChangeCallback}></input>
           <button onClick={() => addTask(curTask)} className='border border-gray-400 w-8 font-bold'>+</button>
         </div>
